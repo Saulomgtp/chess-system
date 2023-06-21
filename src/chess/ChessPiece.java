@@ -1,10 +1,10 @@
 package chess;
 
 
-import boardgame.Peca;
+import boardgame.Piece;
 import boardgame.Tabuleiro;
 
-public class ChessPiece extends Peca {
+public class ChessPiece extends Piece {
 
     private Color color;
 

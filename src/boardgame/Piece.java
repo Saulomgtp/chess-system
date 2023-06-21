@@ -1,10 +1,10 @@
 package boardgame;
 
-public class Peca {
+public class Piece {
     protected Position posicao;
     private Tabuleiro tabuleiro;
 
-    public Peca(Tabuleiro tabuleiro) {
+    public Piece(Tabuleiro tabuleiro) {
         this.tabuleiro = tabuleiro;
         posicao = null;
     }
