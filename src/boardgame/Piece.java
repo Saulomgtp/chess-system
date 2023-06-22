@@ -1,16 +1,16 @@
 package boardgame;
 
 public abstract class Piece {
-    protected Position posicao;
-    private Tabuleiro tabuleiro;
+    protected Position position;
+    private Board board;
 
-    public Piece(Tabuleiro tabuleiro) {
-        this.tabuleiro = tabuleiro;
-        posicao = null;
+    public Piece(Board board) {
+        this.board = board;
+        position = null;
     }
 
-    protected Tabuleiro getTabuleiro() {
-        return tabuleiro;
+    protected Board getBoard() {
+        return board;
     }
 
     public abstract boolean[][] possibleMoves();

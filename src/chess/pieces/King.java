@@ -1,12 +1,12 @@
 package chess.pieces;
 
-import boardgame.Tabuleiro;
+import boardgame.Board;
 import chess.Color;
 import chess.ChessPiece;
 
 public class King extends ChessPiece{
-    public King(Tabuleiro tabuleiro, Color color) {
-        super(tabuleiro, color);
+    public King(Board board, Color color) {
+        super(board, color);
     }
 
     @Override
@@ -16,7 +16,7 @@ public class King extends ChessPiece{
 
     @Override
     public boolean[][] possibleMoves() {
-        boolean[][] mat = new boolean[getTabuleiro().getLinhas()][getTabuleiro().getColunas()];
+        boolean[][] mat = new boolean[getBoard().getLinhas()][getBoard().getColunas()];
         return mat;
     }
 }
