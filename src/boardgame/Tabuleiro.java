@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.time.Period;
+
 public class Tabuleiro {
 
     private int linhas;
@@ -42,6 +44,19 @@ public class Tabuleiro {
         pieces[position.getLinha()][position.getColuna()] = piece;
         piece.posicao = position;
     }
+    public Piece removePiece(Position position) {
+        if(!positionExists(position)) {
+            throw new BoardException("Posição não presente no tabuleiro");
+        }
+        if(piece(position) == null) {
+            return null;
+        }
+        Piece aux = piece(position);
+        aux.posicao = null;
+        pieces[position.getLinha()][position.getColuna()] = null;
+        return aux;
+    }
+
     private boolean positionExists(int linha, int coluna) {
         return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
     }
